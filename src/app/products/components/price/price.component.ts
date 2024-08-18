@@ -15,16 +15,16 @@ public price: number = 0 ;
 public interval$? : Subscription  ;
 
   ngOnInit(): void {
-  console.log('Componente HIJO: fngOnInit')
+  console.log('Componente HIJO: ngOnInit')
 
   this.interval$ = interval(1000).subscribe(value => console.log(`Tick: ${value}`))
   }
   ngOnChanges(changes: SimpleChanges): void {
-  console.log('Componente HIJO: firsngOnChanges')
+  console.log('Componente HIJO: ngOnChanges')
   console.log({changes})
   }
   ngOnDestroy(): void {
-  console.log('Componente HIJO: firsngOnDestroy')
+  console.log('Componente HIJO: ngOnDestroy')
   this.interval$?.unsubscribe();
   }
 
